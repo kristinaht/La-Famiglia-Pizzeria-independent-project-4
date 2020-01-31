@@ -8,6 +8,13 @@ $(document).ready(function(){
       var toppings = $(this).val();
       $("span.toppings-output").append(toppings + " ");
     });
-
   });
 });
+
+//Business logic for Pizza constructor
+function Pizza(toppings, size){
+  this.toppings = toppings;
+  this.size = size;
+}
+
+//Business logic for pizza objects
