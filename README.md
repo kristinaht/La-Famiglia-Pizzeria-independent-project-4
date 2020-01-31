@@ -25,8 +25,9 @@ _Download directly from GitHub_
 ## Behavior Driven Development Specs
 | Behavior                                                                 | Input| Output|
 | -----------------------------------------------------                    |:----:| -----:|
-|                                                                          |      |       |
-|                                                                          |      |       |
+| User selects size for the pizza.                                         | User selects pizza size 32cm| Webpage displays a message: "You selected our 32cm pizza"     |
+| User can choose 3 toppings using checkboxes                              |User checks Mushrooms, Cheeese, Olives      |Application responds with a message "You selected: Mushrooms, Cheese, Olives for your piza       |
+|   After selecting size and toppings, user can click on a button to get the price for the pizza                                                                       |  User clicks the "Calculate price" button     |Following message is displayed: "Your price is $10"       |
 |                                                                          |      |       |
 |                                                                          |      |       |
 
