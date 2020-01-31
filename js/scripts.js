@@ -1,19 +1,24 @@
 //User Interface Logic
+var pizza = new Pizza();
 
-var newTopping = new Topping(toppingName);
-  console.log(newTopping);
-var toppingName;
 $(document).ready(function(){
   $("form").submit(function(){
     event.preventDefault();
 
-    toppingName;
+    var toppingNames = [];
    $("input:checkbox[name=select-toppings]:checked").each(function(){
-      toppingName = $(this).val();});
-      console.log(toppingName);
-
+      toppingName = $(this).val();
+      toppingNames.push(toppingName);
+      console.log(toppingNames);
+   });
     var size = $("select").val();
     $("span.size-output").text(size);
+    
+    var newTopping = new Topping(toppingNames);
+    console.log(newTopping);
+    // newTopping.addTopping(newTopping);
+    console.log(pizza);
+    
     // var toppings = [];
     // $("input:checkbox[name=select-toppings]:checked").each(function(){
     //   var topping = $(this).val();
@@ -30,7 +35,7 @@ $(document).ready(function(){
 
 //Business logic for Pizza constructor
 function Pizza(toppings, size, price){
-  this.toppings = [];
+  this.toppings = toppings;
   this.size = size;
   this.price = price;
   // this.currentToppingId = 0;
@@ -51,10 +56,7 @@ function calculatePrice(toppings, size) {
     }
   }
 
-// Pizza.prototype.addTopping = function(){
-//   // toppings.toppingId = this.assignToppingId();
-//   this.toppings.push(toppingName);
-// }
+
 
 // Pizza.prototype.assignToppingId = function(){
 //   this.currentToppingId ++;
@@ -63,7 +65,11 @@ function calculatePrice(toppings, size) {
 
 
 //Business logic for Topping
-function Topping(toppingName){
-  this.toppingName = toppingName;
+function Topping(toppingNames){
+  this.toppingNames = [];
 }
 
+Topping.prototype.addTopping = function(toppingNames){
+  // toppings.toppingId = this.assignToppingId();
+  this.toppingNames.push(toppingNames);
+}
