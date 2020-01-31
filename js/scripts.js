@@ -34,9 +34,10 @@ function Pizza(toppings, size, price){
 
 function calculatePrice(toppings, size) {
   // if(this.toppings.length >=2 && this.size === "50cm"){
-    if(size === "50cm")
+    if(size === "50cm"){
     this.price = 20;
     return this.price;
+    }
   }
 
 
