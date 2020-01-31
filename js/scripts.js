@@ -1,19 +1,30 @@
 //User Interface Logic
+
+var newTopping = new Topping(toppingName);
+  console.log(newTopping);
+var toppingName;
 $(document).ready(function(){
   $("form").submit(function(){
     event.preventDefault();
+
+    toppingName;
+   $("input:checkbox[name=select-toppings]:checked").each(function(){
+      toppingName = $(this).val();});
+      console.log(toppingName);
+
     var size = $("select").val();
     $("span.size-output").text(size);
-    var toppings = [];
-    $("input:checkbox[name=select-toppings]:checked").each(function(){
-      var topping = $(this).val();
-      toppings.push(topping);
-      return toppings;
-    });
-    console.log(toppings);
-    var price = calculatePrice(toppings, size);
-    var newPizza = new Pizza(toppings, size, price);
-    console.log(newPizza)
+    // var toppings = [];
+    // $("input:checkbox[name=select-toppings]:checked").each(function(){
+    //   var topping = $(this).val();
+    //   toppings.push(topping);
+    //   return toppings;
+    // });
+    // console.log(toppings);
+    // var price = calculatePrice(toppings, size);
+
+    // var newPizza = new Pizza(toppings, size, price);
+    // console.log(newPizza)
   });
 });
 
@@ -40,11 +51,9 @@ function calculatePrice(toppings, size) {
     }
   }
 
-
-
 // Pizza.prototype.addTopping = function(){
-//   toppings.toppingId = this.assignToppingId();
-//   this.toppings.push(topping);
+//   // toppings.toppingId = this.assignToppingId();
+//   this.toppings.push(toppingName);
 // }
 
 // Pizza.prototype.assignToppingId = function(){
@@ -52,4 +61,9 @@ function calculatePrice(toppings, size) {
 //   return this.currentToppingId;
 // }
 
+
+//Business logic for Topping
+function Topping(toppingName){
+  this.toppingName = toppingName;
+}
 
