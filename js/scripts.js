@@ -7,6 +7,8 @@ $(document).ready(function(){
     $("input:checkbox[name=select-toppings]:checked").each(function(){
       var toppings = $(this).val();
       $("span.toppings-output").append(toppings + " ");
+      var pizza = new Pizza(toppings, size);
+      console.log(pizza);
     });
   });
 });
@@ -17,4 +19,4 @@ function Pizza(toppings, size){
   this.size = size;
 }
 
-//Business logic for pizza objects
+
