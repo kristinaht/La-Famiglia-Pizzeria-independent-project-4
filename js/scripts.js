@@ -1,36 +1,20 @@
 //Business logic for Pizza constructor
-function Pizza(toppings, size, price){
+function Pizza(toppings, size){
   this.toppings = toppings;
   this.size = size;
-  // this.price = price;
-  // this.currentToppingId = 0;
 }
 
 Pizza.prototype.calculatePrice = function(toppings, size) {
-  // if(this.toppings.length >=2 && this.size === "50cm"){
-     if(size === "50cm"){
-    this.price = 20;
+  if(size === "50cm" && this.toppings.length >2){
+  this.price = 20;
+  return this.price;
+  }else if(size === "32cm" && this.toppings.length === 1){
+    this.price = 10;
     return this.price;
   }
 }
 
-
-// function calculatePrice(toppings, size) {
-//   // if(this.toppings.length >=2 && this.size === "50cm"){
-   
-//     this.price = 20;
-//     return this.price;
-//     }
-//   }
-
-
-
-// Pizza.prototype.assignToppingId = function(){
-//   this.currentToppingId ++;
-//   return this.currentToppingId;
-// }
-//User Interface Logic
-
+//User Interface logic
  var pizza;
 
 $(document).ready(function(){
@@ -43,22 +27,17 @@ $(document).ready(function(){
       toppingNames.push(toppingName);
       console.log(toppingNames);
     });
+    $("span.toppings-output").text(toppingNames);
     
-
     var size = $("select").val();
     $("span.size-output").text(size);
     
-  
     pizza = new Pizza(toppingNames, size);
     console.log(pizza);
 
     var price = pizza.calculatePrice(toppingNames, size);
     console.log(price);
-    
-    // var price = calculatePrice(toppings, size);
-
-    // var newPizza = new Pizza(toppings, size, price);
-    // console.log(newPizza)
+    $("span.price-output").text(price);
   });
 });
 
