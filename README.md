@@ -1,16 +1,11 @@
-# __
+# Online Pizza Ordering Website
 
-#### _Site that allows users to play a beep-boop game_, 31 January 2020
+#### _Site that allows customers to order customized pizza_, 31 January 2020
 
 #### By _**Kristina Hengster Tintor**_
 
 ## Description
-
-
-
-1. 
-2. 
-3. 
+This is a site for a pizza company where a user can choose one or more individual toppings and a size to order a pizza and see the final cost.
 
 ## Setup/Installation Requirements
 
