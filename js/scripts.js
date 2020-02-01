@@ -2,31 +2,26 @@
 function Pizza(toppings, size, price){
   this.toppings = toppings;
   this.size = size;
-  this.price = price;
+  // this.price = price;
   // this.currentToppingId = 0;
 }
 
-// Pizza.prototype.calculatePrice = function(toppings, size) {
-//   if(this.toppings.length >=2 && this.size === "50cm"){
-//     this.price = 20;
-//     return this.price;
-//   }
-// }
-
-
-// Pizza.prototype.addTopping = function(toppingNames){
-//   // toppings.toppingId = this.assignToppingId();
-//   this.toppings.push(toppingNames);
-// }
-
-
-function calculatePrice(toppings, size) {
+Pizza.prototype.calculatePrice = function(toppings, size) {
   // if(this.toppings.length >=2 && this.size === "50cm"){
-    if(size === "50cm"){
+     if(size === "50cm"){
     this.price = 20;
     return this.price;
-    }
   }
+}
+
+
+// function calculatePrice(toppings, size) {
+//   // if(this.toppings.length >=2 && this.size === "50cm"){
+   
+//     this.price = 20;
+//     return this.price;
+//     }
+//   }
 
 
 
@@ -36,6 +31,7 @@ function calculatePrice(toppings, size) {
 // }
 //User Interface Logic
 
+ var pizza;
 
 $(document).ready(function(){
   $("form").submit(function(){
@@ -52,10 +48,12 @@ $(document).ready(function(){
     var size = $("select").val();
     $("span.size-output").text(size);
     
-    var price;
-
-    var pizza = new Pizza(toppingNames, size, price);
+  
+    pizza = new Pizza(toppingNames, size);
     console.log(pizza);
+
+    var price = pizza.calculatePrice(toppingNames, size);
+    console.log(price);
     
     // var price = calculatePrice(toppings, size);
 
