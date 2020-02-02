@@ -32,7 +32,7 @@ Pizza.prototype.calculatePrice = function(toppings, size) {
 $(document).ready(function(){
   $("form").submit(function(){
     event.preventDefault();
-
+    $("div.output").show();
     var toppingNames = [];
     $("input:checkbox[name=select-toppings]:checked").each(function(){
       toppingName = $(this).val();
