@@ -6,19 +6,19 @@ function Pizza(toppings, size){
 
 Pizza.prototype.calculatePrice = function(toppings, size) {
  basePrice = 10;
-  if(size === "1" && this.toppings.length >2){
+  if(size === "small" && this.toppings.length >2){
     basePrice +=2;
     return basePrice;
-  }else if(size === "2" && this.toppings.length <=2){
+  }else if(size === "medium" && this.toppings.length <=2){
     basePrice +=3;
     return basePrice;
-  }else if(size === "2" && this.toppings.length >2){
+  }else if(size === "medium" && this.toppings.length >2){
     basePrice +=4;
     return basePrice;
-  }else if(size === "3" && this.toppings.length === 1){
+  }else if(size === "large" && this.toppings.length === 1){
     basePrice +=5;
     return basePrice;
-  }else if(size === "3" && this.toppings.length >1){
+  }else if(size === "large" && this.toppings.length >1){
     basePrice += 10;
     return basePrice;
   }else{
@@ -32,7 +32,7 @@ Pizza.prototype.calculatePrice = function(toppings, size) {
 $(document).ready(function(){    
   $("button.btn-block").click(function(){
     $("div.form-page").show();
-    
+
     $("form").submit(function(){
     event.preventDefault();
 

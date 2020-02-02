@@ -26,9 +26,9 @@
             <div class="form-group">
               <label for="size">Choose a size!</label>
               <select name="size" id="size" class="form-control form-control-lg">
-                <option value="1">Small pizza (32cm)</option>
-                <option value="2">Medium pizza (42cm)</option>
-                <option value="3">Large pizza (50cm)</option>
+                <option value="small">Small pizza (32cm)</option>
+                <option value="medium">Medium pizza (42cm)</option>
+                <option value="large">Large pizza (50cm)</option>
               </select>
             </div>
             <div class="form-group">
@@ -46,9 +46,8 @@
         </div>
       </div>
       <div class="output">
-        <p>You selected our <span class="size-output"></span> pizza</p>
-        <p>You selected the following toppings: <span class="toppings-output"></span></p>
-        <p>Your price is: <span class="price-output"></span></p>
+        <p>You selected our <span class="size-output"></span> pizza, with: <span class="toppings-output"></span></p>
+        <p id="pizza-price">Your price is: <span class="price-output"></span></p>
       </div>
   </div>
 </body>
