@@ -29,9 +29,13 @@ Pizza.prototype.calculatePrice = function(toppings, size) {
 //User Interface logic
  var pizza;
 
-$(document).ready(function(){
-  $("form").submit(function(){
+$(document).ready(function(){    
+  $("button.btn-block").click(function(){
+    $("div.form-page").show();
+    
+    $("form").submit(function(){
     event.preventDefault();
+
     $("div.output").show();
     var toppingNames = [];
     $("input:checkbox[name=select-toppings]:checked").each(function(){
@@ -51,6 +55,8 @@ $(document).ready(function(){
     console.log(price);
     $("span.price-output").text(price);
   });
+  $("div.intro-page").hide();
+ });
 });
 
 
