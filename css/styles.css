@@ -1,9 +1,21 @@
+.jumbotron {
+  background-image: linear-gradient(to top left, rgb(12, 24, 26), rgb(58, 124, 124));
+}
+
+.jumbotron h1 {
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+  color:  rgb(245, 234, 199);
+  font-family: papyrus;
+}
+
 .form-page {
   display: none;
 }
 
 form {
- background-image: linear-gradient(to top left, rgb(9, 157, 177), rgb(181, 246, 246));
+ background-image: linear-gradient(to top left, rgb(9, 157, 177), rgb(58, 124, 124));
 }
 
 .output {
