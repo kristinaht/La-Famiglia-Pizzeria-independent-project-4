@@ -11,25 +11,35 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Pizza!</h1>
+    </div>
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4 form-col">
+          <form>
+            <div class="form-group">
+              <label for="size">Choose a size!</label>
+              <select name="size" id="size">
+                <option value="1">32cm</option>
+                <option value="2">42cm</option>
+                <option value="3">50cm</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Select your toppings:</label><br>
+              <input type="checkbox" name="select-toppings" value="mushrooms">Mushrooms<br>
+              <input type="checkbox" name="select-toppings" value="cheese">Cheese<br>
+              <input type="checkbox" name="select-toppings" value="olives">Olives<br>
+              <input type="checkbox" name="select-toppings" value="ham">Ham<br>
+            </div>
+            <button type="submit" class="btn btn-danger">Calculate cost!</button>
+          </form>
+        </div>
+        <div class="col-md-4">
+
+        </div>
       </div>
-      <form>
-        <div class="form-group">
-          <label for="size">Choose a size!</label>
-          <select name="size" id="size">
-            <option value="1">32cm</option>
-            <option value="2">42cm</option>
-            <option value="3">50cm</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Select your toppings:</label><br>
-          <input type="checkbox" name="select-toppings" value="mushrooms">Mushrooms<br>
-          <input type="checkbox" name="select-toppings" value="cheese">Cheese<br>
-          <input type="checkbox" name="select-toppings" value="olives">Olives<br>
-          <input type="checkbox" name="select-toppings" value="ham">Ham<br>
-        </div>
-        <button type="submit" class="btn btn-danger">Calculate cost!</button>
-      </form>
       <div class="output">
         <p>You selected our <span class="size-output"></span> pizza</p>
         <p>You selected the following toppings: <span class="toppings-output"></span></p>
