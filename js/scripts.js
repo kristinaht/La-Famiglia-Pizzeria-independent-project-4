@@ -5,12 +5,24 @@ function Pizza(toppings, size){
 }
 
 Pizza.prototype.calculatePrice = function(toppings, size) {
-  if(size === "3" && this.toppings.length >2){
-  this.price = 20;
-  return this.price;
-  }else if(size === "1" && this.toppings.length === 1){
-    this.price = 10;
-    return this.price;
+ basePrice = 10;
+  if(size === "1" && this.toppings.length >2){
+    basePrice +=2;
+    return basePrice;
+  }else if(size === "2" && this.toppings.length <=2){
+    basePrice +=3;
+    return basePrice;
+  }else if(size === "2" && this.toppings.length >2){
+    basePrice +=4;
+    return basePrice;
+  }else if(size === "3" && this.toppings.length === 1){
+    basePrice +=5;
+    return basePrice;
+  }else if(size === "3" && this.toppings.length >1){
+    basePrice += 10;
+    return basePrice;
+  }else{
+    return basePrice;
   }
 }
 
