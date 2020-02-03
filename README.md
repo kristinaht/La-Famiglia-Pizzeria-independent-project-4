@@ -1,4 +1,4 @@
-# Online Pizza Ordering Website
+# La Famiglia Pizzeria
 
 #### _Site that allows customers to order customized pizza_, 31 January 2020
 
@@ -20,10 +20,10 @@ _Download directly from GitHub_
 ## Behavior Driven Development Specs
 | Behavior                                                                 | Input| Output|
 | -----------------------------------------------------                    |:----:| -----:|
-| User selects size for the pizza.                                         | User selects pizza size 32cm| Webpage displays a message: "You selected our 32cm pizza"     |
-| User can choose 3 toppings using checkboxes                              |User checks Mushrooms, Cheeese, Olives      |Application responds with a message "You selected: Mushrooms, Cheese, Olives for your piza       |
-|   After selecting size and toppings, user can click on a button to get the price for the pizza                                                                       |  User clicks the "Calculate price" button     |Following message is displayed: "Your price is $10"       |
-|                                                                          |      |       |
+| User clicks the "Order Online" button in order to be taken to the online form                                        | User clicks the "Order Online" button| Webpage displays the online form for user to complete     |
+| User can select a size they want.                             |User selects "Medium Size (42cm)" and moves to next field  |Online form field displays "Medium Size (42cm)"       |
+|   User selects up to four toppings using checkboxes.                                                                      |  User checks Cheese, Ham, and Mushrooms     |Cheese, Ham and Mushrooms are selected       |
+|        After selecting size and toppings, user can click the button to find out the price for the pizza                                                                  |User clicks the "Calculate Price" button      |  Webpage displays the following message: "You selected our medium pizza, with mushrooms, cheese and ham. Your price is: $14"     |
 |                                                                          |      |       |
 
 
