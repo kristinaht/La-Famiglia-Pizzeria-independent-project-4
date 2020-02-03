@@ -35,24 +35,18 @@ $(document).ready(function(){
 
     $("form").submit(function(){
     event.preventDefault();
-
     $("div.output").show();
     var toppingNames = [];
     $("input:checkbox[name=select-toppings]:checked").each(function(){
       toppingName = $(this).val();
       toppingNames.push(toppingName);
-      console.log(toppingNames);
     });
     $("span.toppings-output").text(toppingNames);
-    
     var size = $("select").val();
     $("span.size-output").text(size);
     
     pizza = new Pizza(toppingNames, size);
-    console.log(pizza);
-
     var price = pizza.calculatePrice(toppingNames, size);
-    console.log(price);
     $("span.price-output").text(price);
   });
   $("div.intro-page").hide();
